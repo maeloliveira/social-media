@@ -1,6 +1,7 @@
 package com.media.rest.dto;
 
 import jakarta.validation.ConstraintViolation;
+import jakarta.ws.rs.core.Response;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +12,8 @@ import java.util.Set;
 @Setter
 @Getter
 public class ResponseError {
+
+    public static final int UNPROCESSABLE_ENTITY_STATUS = 422;
 
     private String message;
 
@@ -30,5 +33,9 @@ public class ResponseError {
         String message = "Validation for error";
 
         return new ResponseError(message, error);
+    }
+
+    public Response withStatusCode (int code){
+        return Response.status(code).entity(this).build();
     }
 }

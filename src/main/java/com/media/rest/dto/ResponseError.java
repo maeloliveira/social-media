@@ -2,15 +2,13 @@ package com.media.rest.dto;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.ws.rs.core.Response;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
-@Setter
-@Getter
+@Data
 public class ResponseError {
 
     public static final int UNPROCESSABLE_ENTITY_STATUS = 422;

@@ -1,6 +1,6 @@
     package com.media.repository;
 
-    import com.media.database.Post;
+    import com.media.model.Post;
     import io.quarkus.hibernate.orm.panache.PanacheRepository;
     import jakarta.enterprise.context.ApplicationScoped;
 

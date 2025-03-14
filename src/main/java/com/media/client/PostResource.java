@@ -1,7 +1,7 @@
 package com.media.client;
 
-import com.media.database.Post;
-import com.media.database.User;
+import com.media.model.Post;
+import com.media.model.User;
 import com.media.repository.PostRepository;
 import com.media.repository.UserRepository;
 import com.media.rest.dto.CreatePostRequest;
@@ -37,7 +37,8 @@ public class PostResource {
 
         Post post = new Post();
         post.setText(request.getText());
-        post.setId(user.getId());
+        post.setUser(user);
+
 
         postRepository.persist(post);
 

@@ -1,6 +1,6 @@
 package com.media.client;
 
-import com.media.database.User;
+import com.media.model.User;
 import com.media.repository.UserRepository;
 import com.media.rest.dto.CreateUserRequest;
 import com.media.rest.dto.ResponseError;
